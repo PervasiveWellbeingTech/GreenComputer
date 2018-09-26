@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3372DE5D20B1F6C40076067C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3372DE5C20B1F6C40076067C /* AppDelegate.m */; };
+		3372DE6020B1F6C50076067C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3372DE5F20B1F6C50076067C /* ViewController.m */; };
+		3372DE6220B1F6C50076067C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3372DE6120B1F6C50076067C /* Assets.xcassets */; };
+		3372DE6520B1F6C50076067C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3372DE6320B1F6C50076067C /* Main.storyboard */; };
+		3372DE6820B1F6C50076067C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3372DE6720B1F6C50076067C /* main.m */; };
+		3372DE7320B1F6C50076067C /* SubliminalSchedulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3372DE7220B1F6C50076067C /* SubliminalSchedulerTests.m */; };
+		3372DE7E20B1F6C50076067C /* SubliminalSchedulerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3372DE7D20B1F6C50076067C /* SubliminalSchedulerUITests.m */; };
+		3372DE8D20B1F84E0076067C /* CoreBrightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3372DE8C20B1F84E0076067C /* CoreBrightness.framework */; };
+		3372DE9020B1F8B70076067C /* MacGammaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3372DE8F20B1F8B70076067C /* MacGammaController.m */; };
+		3372DE9220B1F9450076067C /* CoreBrightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3372DE8C20B1F84E0076067C /* CoreBrightness.framework */; };
+		3372DE9320B1F9450076067C /* CoreBrightness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3372DE8C20B1F84E0076067C /* CoreBrightness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3372DE6F20B1F6C50076067C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3372DE5020B1F6C40076067C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3372DE5720B1F6C40076067C;
+			remoteInfo = SubliminalScheduler;
+		};
+		3372DE7A20B1F6C50076067C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3372DE5020B1F6C40076067C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3372DE5720B1F6C40076067C;
+			remoteInfo = SubliminalScheduler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3372DE9420B1F9460076067C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3372DE9320B1F9450076067C /* CoreBrightness.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3372DE5820B1F6C40076067C /* SubliminalScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubliminalScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3372DE5B20B1F6C40076067C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3372DE5C20B1F6C40076067C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3372DE5E20B1F6C40076067C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3372DE5F20B1F6C50076067C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3372DE6120B1F6C50076067C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3372DE6420B1F6C50076067C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3372DE6620B1F6C50076067C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3372DE6720B1F6C50076067C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3372DE6920B1F6C50076067C /* SubliminalScheduler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SubliminalScheduler.entitlements; sourceTree = "<group>"; };
+		3372DE6E20B1F6C50076067C /* SubliminalSchedulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubliminalSchedulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3372DE7220B1F6C50076067C /* SubliminalSchedulerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubliminalSchedulerTests.m; sourceTree = "<group>"; };
+		3372DE7420B1F6C50076067C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3372DE7920B1F6C50076067C /* SubliminalSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubliminalSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3372DE7D20B1F6C50076067C /* SubliminalSchedulerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubliminalSchedulerUITests.m; sourceTree = "<group>"; };
+		3372DE7F20B1F6C50076067C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3372DE8C20B1F84E0076067C /* CoreBrightness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBrightness.framework; path = "../Night-Shift-on-Unsupported-Macs-master/Resources/CoreBrightness.framework"; sourceTree = "<group>"; };
+		3372DE8E20B1F8920076067C /* MacGammaController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacGammaController.h; sourceTree = "<group>"; };
+		3372DE8F20B1F8B70076067C /* MacGammaController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacGammaController.m; sourceTree = "<group>"; };
+		3372DE9120B1F8E00076067C /* CBBlueLightClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBBlueLightClient.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3372DE5520B1F6C40076067C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3372DE9220B1F9450076067C /* CoreBrightness.framework in Frameworks */,
+				3372DE8D20B1F84E0076067C /* CoreBrightness.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3372DE6B20B1F6C50076067C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3372DE7620B1F6C50076067C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3372DE4F20B1F6C40076067C = {
+			isa = PBXGroup;
+			children = (
+				3372DE5A20B1F6C40076067C /* SubliminalScheduler */,
+				3372DE7120B1F6C50076067C /* SubliminalSchedulerTests */,
+				3372DE7C20B1F6C50076067C /* SubliminalSchedulerUITests */,
+				3372DE5920B1F6C40076067C /* Products */,
+				3372DE8B20B1F84E0076067C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3372DE5920B1F6C40076067C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3372DE5820B1F6C40076067C /* SubliminalScheduler.app */,
+				3372DE6E20B1F6C50076067C /* SubliminalSchedulerTests.xctest */,
+				3372DE7920B1F6C50076067C /* SubliminalSchedulerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3372DE5A20B1F6C40076067C /* SubliminalScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				3372DE5B20B1F6C40076067C /* AppDelegate.h */,
+				3372DE5C20B1F6C40076067C /* AppDelegate.m */,
+				3372DE5E20B1F6C40076067C /* ViewController.h */,
+				3372DE5F20B1F6C50076067C /* ViewController.m */,
+				3372DE6120B1F6C50076067C /* Assets.xcassets */,
+				3372DE6320B1F6C50076067C /* Main.storyboard */,
+				3372DE6620B1F6C50076067C /* Info.plist */,
+				3372DE6720B1F6C50076067C /* main.m */,
+				3372DE6920B1F6C50076067C /* SubliminalScheduler.entitlements */,
+				3372DE8E20B1F8920076067C /* MacGammaController.h */,
+				3372DE8F20B1F8B70076067C /* MacGammaController.m */,
+				3372DE9120B1F8E00076067C /* CBBlueLightClient.h */,
+			);
+			path = SubliminalScheduler;
+			sourceTree = "<group>";
+		};
+		3372DE7120B1F6C50076067C /* SubliminalSchedulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3372DE7220B1F6C50076067C /* SubliminalSchedulerTests.m */,
+				3372DE7420B1F6C50076067C /* Info.plist */,
+			);
+			path = SubliminalSchedulerTests;
+			sourceTree = "<group>";
+		};
+		3372DE7C20B1F6C50076067C /* SubliminalSchedulerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3372DE7D20B1F6C50076067C /* SubliminalSchedulerUITests.m */,
+				3372DE7F20B1F6C50076067C /* Info.plist */,
+			);
+			path = SubliminalSchedulerUITests;
+			sourceTree = "<group>";
+		};
+		3372DE8B20B1F84E0076067C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3372DE8C20B1F84E0076067C /* CoreBrightness.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3372DE5720B1F6C40076067C /* SubliminalScheduler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3372DE8220B1F6C50076067C /* Build configuration list for PBXNativeTarget "SubliminalScheduler" */;
+			buildPhases = (
+				3372DE5420B1F6C40076067C /* Sources */,
+				3372DE5520B1F6C40076067C /* Frameworks */,
+				3372DE5620B1F6C40076067C /* Resources */,
+				3372DE9420B1F9460076067C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SubliminalScheduler;
+			productName = SubliminalScheduler;
+			productReference = 3372DE5820B1F6C40076067C /* SubliminalScheduler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3372DE6D20B1F6C50076067C /* SubliminalSchedulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3372DE8520B1F6C50076067C /* Build configuration list for PBXNativeTarget "SubliminalSchedulerTests" */;
+			buildPhases = (
+				3372DE6A20B1F6C50076067C /* Sources */,
+				3372DE6B20B1F6C50076067C /* Frameworks */,
+				3372DE6C20B1F6C50076067C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3372DE7020B1F6C50076067C /* PBXTargetDependency */,
+			);
+			name = SubliminalSchedulerTests;
+			productName = SubliminalSchedulerTests;
+			productReference = 3372DE6E20B1F6C50076067C /* SubliminalSchedulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3372DE7820B1F6C50076067C /* SubliminalSchedulerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3372DE8820B1F6C50076067C /* Build configuration list for PBXNativeTarget "SubliminalSchedulerUITests" */;
+			buildPhases = (
+				3372DE7520B1F6C50076067C /* Sources */,
+				3372DE7620B1F6C50076067C /* Frameworks */,
+				3372DE7720B1F6C50076067C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3372DE7B20B1F6C50076067C /* PBXTargetDependency */,
+			);
+			name = SubliminalSchedulerUITests;
+			productName = SubliminalSchedulerUITests;
+			productReference = 3372DE7920B1F6C50076067C /* SubliminalSchedulerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3372DE5020B1F6C40076067C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Peter Washington";
+				TargetAttributes = {
+					3372DE5720B1F6C40076067C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3372DE6D20B1F6C50076067C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3372DE5720B1F6C40076067C;
+					};
+					3372DE7820B1F6C50076067C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3372DE5720B1F6C40076067C;
+					};
+				};
+			};
+			buildConfigurationList = 3372DE5320B1F6C40076067C /* Build configuration list for PBXProject "SubliminalScheduler" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3372DE4F20B1F6C40076067C;
+			productRefGroup = 3372DE5920B1F6C40076067C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3372DE5720B1F6C40076067C /* SubliminalScheduler */,
+				3372DE6D20B1F6C50076067C /* SubliminalSchedulerTests */,
+				3372DE7820B1F6C50076067C /* SubliminalSchedulerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3372DE5620B1F6C40076067C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3372DE6220B1F6C50076067C /* Assets.xcassets in Resources */,
+				3372DE6520B1F6C50076067C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3372DE6C20B1F6C50076067C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3372DE7720B1F6C50076067C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3372DE5420B1F6C40076067C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3372DE6020B1F6C50076067C /* ViewController.m in Sources */,
+				3372DE6820B1F6C50076067C /* main.m in Sources */,
+				3372DE5D20B1F6C40076067C /* AppDelegate.m in Sources */,
+				3372DE9020B1F8B70076067C /* MacGammaController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3372DE6A20B1F6C50076067C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3372DE7320B1F6C50076067C /* SubliminalSchedulerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3372DE7520B1F6C50076067C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3372DE7E20B1F6C50076067C /* SubliminalSchedulerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3372DE7020B1F6C50076067C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3372DE5720B1F6C40076067C /* SubliminalScheduler */;
+			targetProxy = 3372DE6F20B1F6C50076067C /* PBXContainerItemProxy */;
+		};
+		3372DE7B20B1F6C50076067C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3372DE5720B1F6C40076067C /* SubliminalScheduler */;
+			targetProxy = 3372DE7A20B1F6C50076067C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3372DE6320B1F6C50076067C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3372DE6420B1F6C50076067C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3372DE8020B1F6C50076067C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3372DE8120B1F6C50076067C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3372DE8320B1F6C50076067C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SubliminalScheduler/SubliminalScheduler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubliminalScheduler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.SubliminalScheduler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3372DE8420B1F6C50076067C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SubliminalScheduler/SubliminalScheduler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubliminalScheduler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.SubliminalScheduler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3372DE8620B1F6C50076067C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubliminalSchedulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.SubliminalSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SubliminalScheduler.app/Contents/MacOS/SubliminalScheduler";
+			};
+			name = Debug;
+		};
+		3372DE8720B1F6C50076067C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubliminalSchedulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.SubliminalSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SubliminalScheduler.app/Contents/MacOS/SubliminalScheduler";
+			};
+			name = Release;
+		};
+		3372DE8920B1F6C50076067C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubliminalSchedulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.SubliminalSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SubliminalScheduler;
+			};
+			name = Debug;
+		};
+		3372DE8A20B1F6C50076067C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SubliminalSchedulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.SubliminalSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SubliminalScheduler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3372DE5320B1F6C40076067C /* Build configuration list for PBXProject "SubliminalScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3372DE8020B1F6C50076067C /* Debug */,
+				3372DE8120B1F6C50076067C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3372DE8220B1F6C50076067C /* Build configuration list for PBXNativeTarget "SubliminalScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3372DE8320B1F6C50076067C /* Debug */,
+				3372DE8420B1F6C50076067C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3372DE8520B1F6C50076067C /* Build configuration list for PBXNativeTarget "SubliminalSchedulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3372DE8620B1F6C50076067C /* Debug */,
+				3372DE8720B1F6C50076067C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3372DE8820B1F6C50076067C /* Build configuration list for PBXNativeTarget "SubliminalSchedulerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3372DE8920B1F6C50076067C /* Debug */,
+				3372DE8A20B1F6C50076067C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3372DE5020B1F6C40076067C /* Project object */;
+}
