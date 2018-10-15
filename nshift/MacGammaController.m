@@ -48,7 +48,7 @@ float symmetricQuadraticBezier(float x, float bulge) {
     const CGGammaValue blueTable2[256] = {0.0, blue};
     
     for (int i = 0; i < numDisplays; i++) {
-        CGSetDisplayTransferByTable(displays[i], 2, redTable, greenTable, blueTable);
+        //CGSetDisplayTransferByTable(displays[i], 2, redTable, greenTable, blueTable);
         
         CGSetDisplayTransferByTable(displays[i], 2, redTable2, greenTable2, blueTable2);
         
