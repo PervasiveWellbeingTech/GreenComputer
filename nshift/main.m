@@ -11,11 +11,6 @@
 #include <mach/mach.h>
 #include <mach/mach_time.h>
 
-#define RATE_OF_CHANGE 0.001
-
-
-#define STUDY_CONDITION 1
-
 static const uint64_t NANOS_PER_USEC = 1000ULL;
 static const uint64_t NANOS_PER_MILLISEC = 1000ULL * NANOS_PER_USEC;
 static const uint64_t NANOS_PER_SEC = 1000ULL * NANOS_PER_MILLISEC;
@@ -24,6 +19,12 @@ uint64_t time_to_wait_subliminal = 0.01 * NANOS_PER_SEC;
 uint64_t time_to_wait_noticeable = 5 * NANOS_PER_SEC;
 
 static mach_timebase_info_data_t timebase_info;
+
+// PARAMETERS
+float DELTA = 0.001;
+float LOW = 0.27;
+float HIGH = 0.33;
+uint64_t DELAY_SECONDS = 0.01 * NANOS_PER_SEC;
 
 static uint64_t abs_to_nanos(uint64_t abs) {
     return abs * timebase_info.numer  / timebase_info.denom;
@@ -38,13 +39,13 @@ void changeColorRecursive(uint64_t n, bool i, float l) {
     bool is_increasing = i;
     float level = l;
     
-    if (is_increasing) level += 0.001;
-    else level -= 0.005;
+    if (is_increasing) level += DELTA;
+    else level -= DELTA;
 
-    if (level > 0.33) is_increasing = false;
-    if (level < 0.27) is_increasing = true;
+    if (level > HIGH) is_increasing = false;
+    if (level < LOW) is_increasing = true;
     
-    uint64_t next_time_to_schedule = mach_absolute_time() + time_to_wait_subliminal;
+    uint64_t next_time_to_schedule = mach_absolute_time() + DELAY_SECONDS;
     
     [MacGammaController setGammaWithRed:0 green:0 blue:level];
     
@@ -57,10 +58,10 @@ void changeColorRecursive(uint64_t n, bool i, float l) {
 
 int main(int argc, const char * argv[]) {
     
-    // INITIALIZE VARIABLES
-    CBBlueLightClient *client = [[CBBlueLightClient alloc] init];
-    uint64_t next_time_to_schedule = mach_absolute_time();
+
+    //CBBlueLightClient *client = [[CBBlueLightClient alloc] init];
     
+    uint64_t next_time_to_schedule = mach_absolute_time();
     changeColorRecursive(next_time_to_schedule, true, 0.3);
     
     // Restore color settings.
