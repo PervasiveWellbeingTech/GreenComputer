@@ -21,10 +21,32 @@ uint64_t time_to_wait_noticeable = 5 * NANOS_PER_SEC;
 static mach_timebase_info_data_t timebase_info;
 
 // PARAMETERS
-float DELTA = 0.001;
-float LOW = 0.27;
-float HIGH = 0.33;
-uint64_t DELAY_SECONDS = 0.01 * NANOS_PER_SEC;
+float DELTA = 0.01;
+float LOW = 0.5;
+float HIGH = 0.6;
+uint64_t DELAY_SECONDS = 0.0155 * NANOS_PER_SEC;
+
+/*
+ * TODO:
+ *
+ * - Add parameter to set the period (time to get from LOW back to LOW again)
+ * - Basically, parameter to set the frequency
+ * - For 40Hz, the period is 0.025
+ * - Know the limits of the LED lights
+ * - Calibration phase to modify the gamma values as the thing is running.
+ * - Make adaptive system where the human perception wavelength matches the wave of the
+ *     oscillations put out by the program.
+ * - Make code so that it is really easy to tweak all the parameters at very fine grained in order
+ *     to get people's custom wavelengths.
+ * - Figure out how to get baseline RGB. Look for a function for getting Gamma display values.
+ * - Detect most common "color" value on the screen, and set that to baseline color of the screen.
+ * - This most common value will continuously update.
+ * - Add ability to have a delay between oscillations. Perhaps another "delay" parameters.
+ * - And also a parameter for how long the wave should last when it reaches the top of
+ *      the wave as well.
+ * - Refactor variables to make sense in terms of signal processing / waves.
+ * - T = 1 / f
+ */
 
 static uint64_t abs_to_nanos(uint64_t abs) {
     return abs * timebase_info.numer  / timebase_info.denom;
@@ -47,7 +69,7 @@ void changeColorRecursive(uint64_t n, bool i, float l) {
     
     uint64_t next_time_to_schedule = mach_absolute_time() + DELAY_SECONDS;
     
-    [MacGammaController setGammaWithRed:0 green:0 blue:level];
+    [MacGammaController setGammaWithRed:0.5 green:0.5 blue:level ];
     
     // Super quick waiting.
     mach_timebase_info(&timebase_info);
@@ -62,7 +84,7 @@ int main(int argc, const char * argv[]) {
     //CBBlueLightClient *client = [[CBBlueLightClient alloc] init];
     
     uint64_t next_time_to_schedule = mach_absolute_time();
-    changeColorRecursive(next_time_to_schedule, true, 0.3);
+    changeColorRecursive(next_time_to_schedule, true, 0.55);
     
     // Restore color settings.
     //CGDisplayRestoreColorSyncSettings();
