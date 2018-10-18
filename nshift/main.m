@@ -28,6 +28,12 @@ float LOW_G = 0.5;
 float HIGH_G = 0.6;
 float LOW_B = 0.5;
 float HIGH_B = 0.6;
+float DURATION_HIGH_R = 10;
+float DURATION_LOW_R = 3;
+float DURATION_HIGH_G = 10;
+float DURATION_LOW_G = 3;
+float DURATION_HIGH_B = 10;
+float DURATION_LOW_B = 3;
 uint64_t TIMESTEP = 0.0155 * NANOS_PER_SEC;
 
 /*
@@ -65,26 +71,99 @@ static uint64_t nanos_to_abs(uint64_t nanos) {
     return nanos * timebase_info.denom / timebase_info.numer;
 }
 
-void changeColorRecursive(uint64_t n, bool i, float l) {
-    //uint64_t next_time_to_schedule = n;
-    bool is_increasing = i;
-    float level = l;
+void changeColorRecursive(bool ir, float lr, bool ig, float lg, bool ib, float lb,
+                          int8_t dhr, int8_t dhg, int8_t dhb, int8_t dlr, int8_t dlg, int8_t dlb) {
+    // Copy input parameters.
+    bool is_increasing_r = ir;
+    float level_r = lr;
+    bool is_increasing_g = ig;
+    float level_g = lg;
+    bool is_increasing_b = ib;
+    float level_b = lb;
+    int8_t delay_high_r = dhr;
+    int8_t delay_low_r = dlr;
+    int8_t delay_high_g = dhg;
+    int8_t delay_low_g = dlg;
+    int8_t delay_high_b = dhb;
+    int8_t delay_low_b = dlb;
     
-    if (is_increasing) level += COLOR_DELTA;
-    else level -= COLOR_DELTA;
+    // Increase or decrease color level on each channel.
+    if (is_increasing_r) level_r += COLOR_DELTA;
+    else level_r -= COLOR_DELTA;
+    if (is_increasing_g) level_g += COLOR_DELTA;
+    else level_g -= COLOR_DELTA;
+    if (is_increasing_b) level_b += COLOR_DELTA;
+    else level_b -= COLOR_DELTA;
 
-    if (level > HIGH_B) is_increasing = false;
-    if (level < LOW_B) is_increasing = true;
+    // Determine whether we are increasing or decreasing in each color channel.
+    if (level_r > HIGH_R) {
+        is_increasing_r = false;
+        delay_high_r = 0;
+    }
+    if (level_r < LOW_R) {
+        is_increasing_r = true;
+        delay_low_r = 0;
+    }
+    if (level_g > HIGH_G) {
+        is_increasing_g = false;
+        delay_high_g = 0;
+    }
+    if (level_g < LOW_G) {
+        is_increasing_g = true;
+        delay_low_g = 0;
+    }
+    if (level_b > HIGH_B) {
+        is_increasing_b = false;
+        delay_high_b = 0;
+    }
+    if (level_b < LOW_B) {
+        is_increasing_b = true;
+        delay_low_b = 0;
+    }
     
-    uint64_t next_time_to_schedule = mach_absolute_time() + TIMESTEP;
+    // Perform high and low delays, if applicable. Otherwise, reset delays.
+    if (delay_high_r >= DURATION_HIGH_R) {
+        delay_high_r = -1;
+    } else {
+        
+    }
+    if (delay_low_r >= DURATION_LOW_R) {
+        delay_low_r = -1;
+    } else {
+        
+    }
+    if (delay_high_g >= DURATION_HIGH_G) {
+        delay_high_g = -1;
+    } else {
+        
+    }
+    if (delay_low_g >= DURATION_LOW_G) {
+        delay_low_g = -1;
+    } else {
+        
+    }
+    if (delay_high_b >= DURATION_HIGH_B) {
+        delay_high_b = -1;
+    } else {
+        
+    }
+    if (delay_low_b >= DURATION_LOW_B) {
+        delay_low_b = -1;
+    } else {
+        
+    }
     
-    [MacGammaController setGammaWithRed:0.5 green:0.5 blue:level ];
+    // Actually set the monitor display settings.
+    [MacGammaController setGammaWithRed:level_r green:level_g blue:level_b];
     
     // Super quick waiting.
+    uint64_t next_time_to_schedule = mach_absolute_time() + TIMESTEP;
     mach_timebase_info(&timebase_info);
     mach_wait_until(next_time_to_schedule);
     
-    changeColorRecursive(0, is_increasing, level);
+    // Recursively call the next iteration of the color change.
+    changeColorRecursive(is_increasing_r, level_r, is_increasing_g, level_g, is_increasing_b, level_b,
+                         delay_high_r, delay_high_g, delay_high_b, delay_low_r, delay_low_g, delay_low_b);
 }
 
 int main(int argc, const char * argv[]) {
@@ -93,7 +172,8 @@ int main(int argc, const char * argv[]) {
     //CBBlueLightClient *client = [[CBBlueLightClient alloc] init];
     
     uint64_t next_time_to_schedule = mach_absolute_time();
-    changeColorRecursive(next_time_to_schedule, true, 0.55);
+    changeColorRecursive(true, 0.55, true, 0.55, true, 0.55,
+                         -1, -1, -1, -1, -1, -1);
     
     // Restore color settings.
     //CGDisplayRestoreColorSyncSettings();
