@@ -16,6 +16,25 @@
 
 
 
+/*
+ * TODO - 10/24/2018
+ *
+ * This week: focus on the biology rather than the technical aspects.
+ * Understand eye perception of signal and what is getting to the visual cortex. Prepare a slide.
+ * In parallel, use a colorimiter to measure color / pupil dialation as well as EEG.
+ * Talk with neuroscience friends; get in room with whiteboard and explain what we are doing.
+ * Invite Pablo if possible.
+ * Do we see signal / is visual cortex simulated with the low frequency????
+ *
+ * ----------------------------------------------------------------------------------------
+ *
+ * Get a coloromiter to verify!!!
+ * Parameterize the rest of the variables.
+ * Can buil different "duty cycles" with the delays.
+ *
+ */
+
+
 static const uint64_t NANOS_PER_USEC = 1000ULL;
 static const uint64_t NANOS_PER_MILLISEC = 1000ULL * NANOS_PER_USEC;
 static const uint64_t NANOS_PER_SEC = 1000ULL * NANOS_PER_MILLISEC;
@@ -28,18 +47,18 @@ static mach_timebase_info_data_t timebase_info;
 // PARAMETERS
 float COLOR_DELTA = 0.01;
 float LOW_R = 0.5;
-float HIGH_R = 0.6;
+float HIGH_R = 0.51;
 float LOW_G = 0.5;
-float HIGH_G = 0.6;
+float HIGH_G = 0.51;
 float LOW_B = 0.5;
-float HIGH_B = 0.6;
-float DURATION_HIGH_R = 0;
-float DURATION_LOW_R = 50;
-float DURATION_HIGH_G = 0;
-float DURATION_LOW_G = 50;
-float DURATION_HIGH_B = 0;
-float DURATION_LOW_B = 50;
-uint64_t TIMESTEP = 0.0155 * NANOS_PER_SEC;
+float HIGH_B = 0.51;
+float DURATION_HIGH_R = 0.0025;
+float DURATION_LOW_R = 0.0025;
+float DURATION_HIGH_G = 0.0025;
+float DURATION_LOW_G = 0.0025;
+float DURATION_HIGH_B = 0.0025;
+float DURATION_LOW_B = 0.0025;
+uint64_t TIMESTEP = 0.0001 * NANOS_PER_SEC; // 40Hz = 0.00125 * NANOS_PER_SEC, 30Hz = 0.0016667 * NANOS_PER_SEC, 100Hz = 0.0005 * NANOS_PER_SEC
 
 bool shouldStop = false;
 
