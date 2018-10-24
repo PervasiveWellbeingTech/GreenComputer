@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3340837F21802D39005A5841 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3340837E21802D39005A5841 /* AppDelegate.m */; };
+		3340838221802D39005A5841 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3340838121802D39005A5841 /* ViewController.m */; };
+		3340838421802D3A005A5841 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3340838321802D3A005A5841 /* Assets.xcassets */; };
+		3340838721802D3A005A5841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3340838521802D3A005A5841 /* Main.storyboard */; };
+		3340838A21802D3A005A5841 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3340838921802D3A005A5841 /* main.m */; };
+		3340839521802D3A005A5841 /* ScreenColorChangerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3340839421802D3A005A5841 /* ScreenColorChangerTests.m */; };
+		334083A021802D3A005A5841 /* ScreenColorChangerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3340839F21802D3A005A5841 /* ScreenColorChangerUITests.m */; };
+		334083AF21802D89005A5841 /* MacGammaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 334083AE21802D89005A5841 /* MacGammaController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3340839121802D3A005A5841 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3340837221802D39005A5841 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3340837921802D39005A5841;
+			remoteInfo = ScreenColorChanger;
+		};
+		3340839C21802D3A005A5841 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3340837221802D39005A5841 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3340837921802D39005A5841;
+			remoteInfo = ScreenColorChanger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3340837A21802D39005A5841 /* ScreenColorChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenColorChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3340837D21802D39005A5841 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3340837E21802D39005A5841 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3340838021802D39005A5841 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3340838121802D39005A5841 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3340838321802D3A005A5841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3340838621802D3A005A5841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3340838821802D3A005A5841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3340838921802D3A005A5841 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3340838B21802D3A005A5841 /* ScreenColorChanger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenColorChanger.entitlements; sourceTree = "<group>"; };
+		3340839021802D3A005A5841 /* ScreenColorChangerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenColorChangerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3340839421802D3A005A5841 /* ScreenColorChangerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenColorChangerTests.m; sourceTree = "<group>"; };
+		3340839621802D3A005A5841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3340839B21802D3A005A5841 /* ScreenColorChangerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenColorChangerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3340839F21802D3A005A5841 /* ScreenColorChangerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenColorChangerUITests.m; sourceTree = "<group>"; };
+		334083A121802D3A005A5841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		334083AD21802D72005A5841 /* MacGammaController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacGammaController.h; sourceTree = "<group>"; };
+		334083AE21802D89005A5841 /* MacGammaController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacGammaController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3340837721802D39005A5841 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3340838D21802D3A005A5841 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3340839821802D3A005A5841 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3340837121802D39005A5841 = {
+			isa = PBXGroup;
+			children = (
+				3340837C21802D39005A5841 /* ScreenColorChanger */,
+				3340839321802D3A005A5841 /* ScreenColorChangerTests */,
+				3340839E21802D3A005A5841 /* ScreenColorChangerUITests */,
+				3340837B21802D39005A5841 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3340837B21802D39005A5841 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3340837A21802D39005A5841 /* ScreenColorChanger.app */,
+				3340839021802D3A005A5841 /* ScreenColorChangerTests.xctest */,
+				3340839B21802D3A005A5841 /* ScreenColorChangerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3340837C21802D39005A5841 /* ScreenColorChanger */ = {
+			isa = PBXGroup;
+			children = (
+				3340837D21802D39005A5841 /* AppDelegate.h */,
+				3340837E21802D39005A5841 /* AppDelegate.m */,
+				3340838021802D39005A5841 /* ViewController.h */,
+				3340838121802D39005A5841 /* ViewController.m */,
+				3340838321802D3A005A5841 /* Assets.xcassets */,
+				3340838521802D3A005A5841 /* Main.storyboard */,
+				3340838821802D3A005A5841 /* Info.plist */,
+				3340838921802D3A005A5841 /* main.m */,
+				3340838B21802D3A005A5841 /* ScreenColorChanger.entitlements */,
+				334083AD21802D72005A5841 /* MacGammaController.h */,
+				334083AE21802D89005A5841 /* MacGammaController.m */,
+			);
+			path = ScreenColorChanger;
+			sourceTree = "<group>";
+		};
+		3340839321802D3A005A5841 /* ScreenColorChangerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3340839421802D3A005A5841 /* ScreenColorChangerTests.m */,
+				3340839621802D3A005A5841 /* Info.plist */,
+			);
+			path = ScreenColorChangerTests;
+			sourceTree = "<group>";
+		};
+		3340839E21802D3A005A5841 /* ScreenColorChangerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3340839F21802D3A005A5841 /* ScreenColorChangerUITests.m */,
+				334083A121802D3A005A5841 /* Info.plist */,
+			);
+			path = ScreenColorChangerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3340837921802D39005A5841 /* ScreenColorChanger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 334083A421802D3A005A5841 /* Build configuration list for PBXNativeTarget "ScreenColorChanger" */;
+			buildPhases = (
+				3340837621802D39005A5841 /* Sources */,
+				3340837721802D39005A5841 /* Frameworks */,
+				3340837821802D39005A5841 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenColorChanger;
+			productName = ScreenColorChanger;
+			productReference = 3340837A21802D39005A5841 /* ScreenColorChanger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3340838F21802D3A005A5841 /* ScreenColorChangerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 334083A721802D3A005A5841 /* Build configuration list for PBXNativeTarget "ScreenColorChangerTests" */;
+			buildPhases = (
+				3340838C21802D3A005A5841 /* Sources */,
+				3340838D21802D3A005A5841 /* Frameworks */,
+				3340838E21802D3A005A5841 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3340839221802D3A005A5841 /* PBXTargetDependency */,
+			);
+			name = ScreenColorChangerTests;
+			productName = ScreenColorChangerTests;
+			productReference = 3340839021802D3A005A5841 /* ScreenColorChangerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3340839A21802D3A005A5841 /* ScreenColorChangerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 334083AA21802D3A005A5841 /* Build configuration list for PBXNativeTarget "ScreenColorChangerUITests" */;
+			buildPhases = (
+				3340839721802D3A005A5841 /* Sources */,
+				3340839821802D3A005A5841 /* Frameworks */,
+				3340839921802D3A005A5841 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3340839D21802D3A005A5841 /* PBXTargetDependency */,
+			);
+			name = ScreenColorChangerUITests;
+			productName = ScreenColorChangerUITests;
+			productReference = 3340839B21802D3A005A5841 /* ScreenColorChangerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3340837221802D39005A5841 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Peter Washington";
+				TargetAttributes = {
+					3340837921802D39005A5841 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					3340838F21802D3A005A5841 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 3340837921802D39005A5841;
+					};
+					3340839A21802D3A005A5841 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 3340837921802D39005A5841;
+					};
+				};
+			};
+			buildConfigurationList = 3340837521802D39005A5841 /* Build configuration list for PBXProject "ScreenColorChanger" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3340837121802D39005A5841;
+			productRefGroup = 3340837B21802D39005A5841 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3340837921802D39005A5841 /* ScreenColorChanger */,
+				3340838F21802D3A005A5841 /* ScreenColorChangerTests */,
+				3340839A21802D3A005A5841 /* ScreenColorChangerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3340837821802D39005A5841 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3340838421802D3A005A5841 /* Assets.xcassets in Resources */,
+				3340838721802D3A005A5841 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3340838E21802D3A005A5841 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3340839921802D3A005A5841 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3340837621802D39005A5841 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3340838221802D39005A5841 /* ViewController.m in Sources */,
+				3340838A21802D3A005A5841 /* main.m in Sources */,
+				3340837F21802D39005A5841 /* AppDelegate.m in Sources */,
+				334083AF21802D89005A5841 /* MacGammaController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3340838C21802D3A005A5841 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3340839521802D3A005A5841 /* ScreenColorChangerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3340839721802D3A005A5841 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				334083A021802D3A005A5841 /* ScreenColorChangerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3340839221802D3A005A5841 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3340837921802D39005A5841 /* ScreenColorChanger */;
+			targetProxy = 3340839121802D3A005A5841 /* PBXContainerItemProxy */;
+		};
+		3340839D21802D3A005A5841 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3340837921802D39005A5841 /* ScreenColorChanger */;
+			targetProxy = 3340839C21802D3A005A5841 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3340838521802D3A005A5841 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3340838621802D3A005A5841 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		334083A221802D3A005A5841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		334083A321802D3A005A5841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		334083A521802D3A005A5841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ScreenColorChanger/ScreenColorChanger.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenColorChanger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pervasivewellbeing.ScreenColorChanger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		334083A621802D3A005A5841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ScreenColorChanger/ScreenColorChanger.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenColorChanger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pervasivewellbeing.ScreenColorChanger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		334083A821802D3A005A5841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenColorChangerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pervasivewellbeing.ScreenColorChangerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenColorChanger.app/Contents/MacOS/ScreenColorChanger";
+			};
+			name = Debug;
+		};
+		334083A921802D3A005A5841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenColorChangerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pervasivewellbeing.ScreenColorChangerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenColorChanger.app/Contents/MacOS/ScreenColorChanger";
+			};
+			name = Release;
+		};
+		334083AB21802D3A005A5841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenColorChangerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pervasivewellbeing.ScreenColorChangerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ScreenColorChanger;
+			};
+			name = Debug;
+		};
+		334083AC21802D3A005A5841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenColorChangerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pervasivewellbeing.ScreenColorChangerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ScreenColorChanger;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3340837521802D39005A5841 /* Build configuration list for PBXProject "ScreenColorChanger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				334083A221802D3A005A5841 /* Debug */,
+				334083A321802D3A005A5841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		334083A421802D3A005A5841 /* Build configuration list for PBXNativeTarget "ScreenColorChanger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				334083A521802D3A005A5841 /* Debug */,
+				334083A621802D3A005A5841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		334083A721802D3A005A5841 /* Build configuration list for PBXNativeTarget "ScreenColorChangerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				334083A821802D3A005A5841 /* Debug */,
+				334083A921802D3A005A5841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		334083AA21802D3A005A5841 /* Build configuration list for PBXNativeTarget "ScreenColorChangerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				334083AB21802D3A005A5841 /* Debug */,
+				334083AC21802D3A005A5841 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3340837221802D39005A5841 /* Project object */;
+}

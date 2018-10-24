@@ -1,15 +1,20 @@
-// Program to adjust the color temperature and hue of the screen.
+//
+//  ViewController.m
+//  ScreenColorChanger
+//
+//  Created by Peter Washington on 10/23/18.
+//  Copyright © 2018 Peter Washington. All rights reserved.
+//
 
-// Copyright 2018 Peter Washington, Pervasive Wellbeing Technology Lab.
+#import "ViewController.h"
 
-
-
-#import <Foundation/Foundation.h>
-#import "CBBlueLightClient.h"
 #import "MacGammaController.h"
-
 #include <mach/mach.h>
 #include <mach/mach_time.h>
+
+@implementation ViewController
+
+
 
 static const uint64_t NANOS_PER_USEC = 1000ULL;
 static const uint64_t NANOS_PER_MILLISEC = 1000ULL * NANOS_PER_USEC;
@@ -36,32 +41,6 @@ float DURATION_HIGH_B = 0;
 float DURATION_LOW_B = 50;
 uint64_t TIMESTEP = 0.0155 * NANOS_PER_SEC;
 
-/*
- * TODO:
- *
- * ---------------------------------------------------------------------------------
- * ( ) = TODO
- * (-) = DONE
- * ---------------------------------------------------------------------------------
- *
- * ( ) Add parameter to set the period (time to get from LOW back to LOW again)
- * ( ) Basically, parameter to set the frequency
- * (-) For 40Hz, the period is 0.025
- * ( ) Know the limits of the LED lights
- * ( ) Calibration phase to modify the gamma values as the thing is running.
- * ( ) Make adaptive system where the human perception wavelength matches the wave of the
- *     oscillations put out by the program.
- * ( ) Make code so that it is really easy to tweak all the parameters at very fine grained in order
- *     to get people's custom wavelengths.
- * ( ) Figure out how to get baseline RGB. Look for a function for getting Gamma display values.
- * ( ) Detect most common "color" value on the screen, and set that to baseline color of the screen.
- * ( ) This most common value will continuously update.
- * (-) Add ability to have a delay between oscillations. Perhaps another "delay" parameters.
- * (-) And also a parameter for how long the wave should last when it reaches the top of
- *      the wave as well.
- * (-) Refactor variables to make sense in terms of signal processing / waves.
- * (-) T = 1 / f
- */
 
 static uint64_t abs_to_nanos(uint64_t abs) {
     return abs * timebase_info.numer  / timebase_info.denom;
@@ -86,7 +65,7 @@ void changeColorRecursive(bool ir, float lr, bool ig, float lg, bool ib, float l
     int8_t delay_low_g = dlg;
     int8_t delay_high_b = dhb;
     int8_t delay_low_b = dlb;
-
+    
     // Detect when color thresholds have been exceeded.
     if (level_r > HIGH_R) {
         is_increasing_r = false;
@@ -190,18 +169,37 @@ void changeColorRecursive(bool ir, float lr, bool ig, float lg, bool ib, float l
                          delay_high_r, delay_high_g, delay_high_b, delay_low_r, delay_low_g, delay_low_b);
 }
 
-int main(int argc, const char * argv[]) {
-    
 
-    //CBBlueLightClient *client = [[CBBlueLightClient alloc] init];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    // Do any additional setup after loading the view.
+    
     
     uint64_t next_time_to_schedule = mach_absolute_time();
-    changeColorRecursive(true, 0.55, true, 0.55, true, 0.55,
-                         -1, -1, -1, -1, -1, -1);
-    
-    // Restore color settings.
-    //CGDisplayRestoreColorSyncSettings();
-    return 0;
+    //changeColorRecursive(true, 0.55, true, 0.55, true, 0.55,
+    // -1, -1, -1, -1, -1, -1);
 }
 
 
+- (void)setRepresentedObject:(id)representedObject {
+    [super setRepresentedObject:representedObject];
+
+    // Update the view, if already loaded.
+}
+
+
+- (IBAction)onStartPressed:(id)sender {
+    changeColorRecursive(true, 0.55, true, 0.55, true, 0.55,
+                         -1, -1, -1, -1, -1, -1);
+}
+
+
+- (IBAction)onStopPressed:(id)sender {
+    // Restore color settings.
+    CGDisplayRestoreColorSyncSettings();
+}
+
+
+
+@end
