@@ -41,6 +41,8 @@ float DURATION_HIGH_B = 0;
 float DURATION_LOW_B = 50;
 uint64_t TIMESTEP = 0.0155 * NANOS_PER_SEC;
 
+bool shouldStop = false;
+
 
 static uint64_t abs_to_nanos(uint64_t abs) {
     return abs * timebase_info.numer  / timebase_info.denom;
@@ -65,6 +67,12 @@ void changeColorRecursive(bool ir, float lr, bool ig, float lg, bool ib, float l
     int8_t delay_low_g = dlg;
     int8_t delay_high_b = dhb;
     int8_t delay_low_b = dlb;
+    
+    // End if the "Stop" button has been pressed.
+    if (shouldStop) {
+        CGDisplayRestoreColorSyncSettings();
+        return;
+    }
     
     // Detect when color thresholds have been exceeded.
     if (level_r > HIGH_R) {
@@ -190,16 +198,66 @@ void changeColorRecursive(bool ir, float lr, bool ig, float lg, bool ib, float l
 
 
 - (IBAction)onStartPressed:(id)sender {
-    changeColorRecursive(true, 0.55, true, 0.55, true, 0.55,
-                         -1, -1, -1, -1, -1, -1);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        changeColorRecursive(true, 0.55, true, 0.55, true, 0.55,
+                             -1, -1, -1, -1, -1, -1);
+    });
 }
 
 
 - (IBAction)onStopPressed:(id)sender {
     // Restore color settings.
-    CGDisplayRestoreColorSyncSettings();
+    shouldStop = true;
 }
 
+
+- (IBAction)onChangeLowDelay:(id)sender {
+    DURATION_LOW_R = [_low_delay doubleValue];
+    DURATION_LOW_G = [_low_delay doubleValue];
+    DURATION_LOW_B = [_low_delay doubleValue];
+}
+
+
+- (IBAction)onChangeHighDelay:(id)sender {
+    DURATION_HIGH_R = [_high_delay doubleValue];
+    DURATION_HIGH_G = [_high_delay doubleValue];
+    DURATION_HIGH_B = [_high_delay doubleValue];
+}
+
+
+- (IBAction)onChangeTimestep:(id)sender {
+    TIMESTEP = [_time_step doubleValue];
+}
+
+
+- (IBAction)onChangeLowR:(id)sender {
+    LOW_R = [_low_r doubleValue];
+}
+
+
+- (IBAction)onChangeLowG:(id)sender {
+    LOW_G = [_low_g doubleValue];
+}
+
+
+- (IBAction)onChangeLowB:(id)sender {
+    LOW_B = [_low_b doubleValue];
+}
+
+
+- (IBAction)onChangeHighR:(id)sender {
+    HIGH_R = [_high_r doubleValue];
+}
+
+
+- (IBAction)onChangeHighG:(id)sender {
+    HIGH_G = [_high_g doubleValue];
+}
+
+
+- (IBAction)onChangeHighB:(id)sender {
+    HIGH_B = [_high_b doubleValue];
+}
 
 
 @end
