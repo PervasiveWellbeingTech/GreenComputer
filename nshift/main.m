@@ -28,12 +28,12 @@ float LOW_G = 0.5;
 float HIGH_G = 0.6;
 float LOW_B = 0.5;
 float HIGH_B = 0.6;
-float DURATION_HIGH_R = 10;
-float DURATION_LOW_R = 3;
-float DURATION_HIGH_G = 10;
-float DURATION_LOW_G = 3;
-float DURATION_HIGH_B = 10;
-float DURATION_LOW_B = 3;
+float DURATION_HIGH_R = 0;
+float DURATION_LOW_R = 10;
+float DURATION_HIGH_G = 0;
+float DURATION_LOW_G = 10;
+float DURATION_HIGH_B = 0;
+float DURATION_LOW_B = 10;
 uint64_t TIMESTEP = 0.0155 * NANOS_PER_SEC;
 
 /*
@@ -41,7 +41,7 @@ uint64_t TIMESTEP = 0.0155 * NANOS_PER_SEC;
  *
  * ---------------------------------------------------------------------------------
  * ( ) = TODO
- * ( ) = DONE
+ * (-) = DONE
  * ---------------------------------------------------------------------------------
  *
  * ( ) Add parameter to set the period (time to get from LOW back to LOW again)
@@ -56,8 +56,8 @@ uint64_t TIMESTEP = 0.0155 * NANOS_PER_SEC;
  * ( ) Figure out how to get baseline RGB. Look for a function for getting Gamma display values.
  * ( ) Detect most common "color" value on the screen, and set that to baseline color of the screen.
  * ( ) This most common value will continuously update.
- * ( ) Add ability to have a delay between oscillations. Perhaps another "delay" parameters.
- * ( ) And also a parameter for how long the wave should last when it reaches the top of
+ * (-) Add ability to have a delay between oscillations. Perhaps another "delay" parameters.
+ * (-) And also a parameter for how long the wave should last when it reaches the top of
  *      the wave as well.
  * (-) Refactor variables to make sense in terms of signal processing / waves.
  * (-) T = 1 / f
@@ -86,16 +86,8 @@ void changeColorRecursive(bool ir, float lr, bool ig, float lg, bool ib, float l
     int8_t delay_low_g = dlg;
     int8_t delay_high_b = dhb;
     int8_t delay_low_b = dlb;
-    
-    // Increase or decrease color level on each channel.
-    if (is_increasing_r) level_r += COLOR_DELTA;
-    else level_r -= COLOR_DELTA;
-    if (is_increasing_g) level_g += COLOR_DELTA;
-    else level_g -= COLOR_DELTA;
-    if (is_increasing_b) level_b += COLOR_DELTA;
-    else level_b -= COLOR_DELTA;
 
-    // Determine whether we are increasing or decreasing in each color channel.
+    // Detect when color thresholds have been exceeded.
     if (level_r > HIGH_R) {
         is_increasing_r = false;
         delay_high_r = 0;
@@ -121,36 +113,68 @@ void changeColorRecursive(bool ir, float lr, bool ig, float lg, bool ib, float l
         delay_low_b = 0;
     }
     
-    // Perform high and low delays, if applicable. Otherwise, reset delays.
-    if (delay_high_r >= DURATION_HIGH_R) {
-        delay_high_r = -1;
-    } else {
-        
+    // Increase delay clock. Reset delay clock when exceed threshold.
+    if (delay_high_r > -1) {
+        if (delay_high_r >= DURATION_HIGH_R) {
+            delay_high_r = -1;
+        } else {
+            delay_high_r++;
+        }
     }
-    if (delay_low_r >= DURATION_LOW_R) {
-        delay_low_r = -1;
-    } else {
-        
+    if (delay_low_r > -1) {
+        if (delay_low_r >= DURATION_LOW_R) {
+            delay_low_r = -1;
+        } else {
+            delay_low_r++;
+        }
     }
-    if (delay_high_g >= DURATION_HIGH_G) {
-        delay_high_g = -1;
-    } else {
-        
+    if (delay_high_g > -1) {
+        if (delay_high_g >= DURATION_HIGH_G) {
+            delay_high_g = -1;
+        } else {
+            delay_high_g++;
+        }
     }
-    if (delay_low_g >= DURATION_LOW_G) {
-        delay_low_g = -1;
-    } else {
-        
+    if (delay_low_g > -1) {
+        if (delay_low_g >= DURATION_LOW_G) {
+            delay_low_g = -1;
+        } else {
+            delay_low_g++;
+        }
     }
-    if (delay_high_b >= DURATION_HIGH_B) {
-        delay_high_b = -1;
-    } else {
-        
+    if (delay_high_b > -1) {
+        if (delay_high_b >= DURATION_HIGH_B) {
+            delay_high_b = -1;
+        } else {
+            delay_high_b++;
+        }
     }
-    if (delay_low_b >= DURATION_LOW_B) {
-        delay_low_b = -1;
-    } else {
-        
+    if (delay_low_b > -1) {
+        if (delay_low_b >= DURATION_LOW_B) {
+            delay_low_b = -1;
+        } else {
+            delay_low_b++;
+        }
+    }
+    
+    // Increase or decrease color level on each channel. Also account for delays.
+    if (delay_high_r == -1 && is_increasing_r) {
+        level_r += COLOR_DELTA;
+    }
+    else if (delay_low_r == -1 && !is_increasing_r) {
+        level_r -= COLOR_DELTA;
+    }
+    if (delay_high_g == -1 && is_increasing_g) {
+        level_g += COLOR_DELTA;
+    }
+    else if (delay_low_g == -1 && !is_increasing_g) {
+        level_g -= COLOR_DELTA;
+    }
+    if (delay_high_b == -1 && is_increasing_b) {
+        level_b += COLOR_DELTA;
+    }
+    else if (delay_low_b == -1 && !is_increasing_b) {
+        level_b -= COLOR_DELTA;
     }
     
     // Actually set the monitor display settings.
